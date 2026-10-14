@@ -1,0 +1,10 @@
+{
+  "_comment": "Единый бюджет одного run_id на все фазы: планирование, исполнение, восстановление.",
+  "limits": {
+    "model_requests": 40,
+    "tool_calls": 80,
+    "side_effects": 20,
+    "output_bytes": 300000
+  },
+  "per_call_output_bytes": 20000
+}

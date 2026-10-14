@@ -1,0 +1,19 @@
+{
+  "_comment": "Policy агента. Лежит вне workspace, инструменты агента не могут её прочитать или изменить. Команды - точные строки; директории - относительно workspace, при загрузке канонизируются. Запрет важнее разрешения, всё неразрешённое запрещено.",
+  "commands": {
+    "allow": [
+      "python3 -m unittest -v",
+      "python3 -m unittest",
+      "ls -la",
+      "pwd"
+    ],
+    "deny": [
+      "rm -rf .",
+      "git push"
+    ]
+  },
+  "directories": {
+    "allow": ["."],
+    "deny": ["private"]
+  }
+}
